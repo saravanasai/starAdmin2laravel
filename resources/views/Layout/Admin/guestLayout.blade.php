@@ -20,48 +20,22 @@
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="{{asset('template/css/vertical-layout-light/style.css')}}">
+  <link rel="stylesheet" href="{{asset('template/css/vertical-layout-light/custom.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
+  
 </head>
 <body>
     <div id="preloaders" class="preloader">
        
     </div>
   <div class="container-scroller">
-    <!-- partial:partials/_navbar.html -->
-     {{-- NavBar includes --}}
-      @include('Layout.Admin.NabBar')
-     {{-- NavBar End --}}
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_settings-panel.html -->
-       {{-- Setting for Changing Theme --}}
-       {{-- !!!important Dont Remove !!! --}}
-       {{-- @include('Layout.Admin.Settings') --}}
-       {{-- Setting for Changing Theme End --}}
-      <!-- partial -->
-      <!-- partial:partials/_sidebar.html -->
-         @include('Layout.Admin.SideBar')
-      <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
-               @yield('content')
-        </div>
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-                @include('Layout.Admin.Footer')
-        <!-- partial -->
-      </div>
-      <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-  </div>
+     @yield('content')
   <!-- container-scroller -->
 
   <!-- plugins:js -->
-  <script src="{{asset('template/jquery/jquery-3.6.0.min.js')}}"></script>
+ 
   <script src="{{asset('template/vendors/js/vendor.bundle.base.js')}}"></script>
-  
   <!-- endinject -->
   <!-- Plugin js for this page -->
   <script src="{{asset('template/vendors/chart.js/Chart.min.js')}}"></script>
@@ -70,6 +44,7 @@
 
   <!-- End plugin js for this page -->
   <!-- inject:js -->
+ 
   <script src="{{asset('template/js/off-canvas.js')}}"></script>
   <script src="{{asset('template/js/hoverable-collapse.js')}}"></script>
   <script src="{{asset('template/js/template.js')}}"></script>
@@ -80,11 +55,8 @@
   <script src="{{asset('template/js/jquery.cookie.js')}}" type="text/javascript"></script>
   <script src="{{asset('template/js/dashboard.js')}}"></script>
   <script src="{{asset('template/js/Chart.roundedBarCharts.js')}}"></script>
-  <script>
-     $(function() {
-        $("#preloaders").fadeOut(1000);
- });
-  </script>
+  <script src="{{asset('template/jquery/jquery-3.6.0.min.js')}}"></script>
+  
   @yield('js')
   <!-- End custom js for this page-->
 </body>
