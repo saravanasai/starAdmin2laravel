@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   @yield('tittle')
   <!-- plugins:css -->
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <link rel="stylesheet" href="{{asset('template/vendors/feather/feather.css')}}">
   <link rel="stylesheet" href="{{asset('template/vendors/mdi/css/materialdesignicons.min.css')}}">
   <link rel="stylesheet" href="{{asset('template/vendors/ti-icons/css/themify-icons.css')}}">
@@ -59,6 +60,7 @@
   <!-- container-scroller -->
 
   <!-- plugins:js -->
+  <script src="{{asset('js/app.js')}}"></script>
   <script src="{{asset('template/jquery/jquery-3.6.0.min.js')}}"></script>
   <script src="{{asset('template/vendors/js/vendor.bundle.base.js')}}"></script>
   

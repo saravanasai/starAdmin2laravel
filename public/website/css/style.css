@@ -56,7 +56,7 @@ h2 {
 }
 
 .heading_container h2 span {
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .heading_container p {
@@ -153,11 +153,11 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link svg, .custom_nav-container .navbar-nav .nav-item.active .nav-link svg {
-  fill: #ffe529;
+  fill: #ffcc2a;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -169,7 +169,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn:hover {
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .custom_nav-container .navbar-toggler {
@@ -265,7 +265,7 @@ a:focus {
 }
 
 .slider_section .detail-box h1 span {
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .slider_section .detail-box p {
@@ -275,8 +275,8 @@ a:focus {
 .slider_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #ffe529;
-  border: 1px solid #ffe529;
+  background-color: #ffcc2a;
+  border: 1px solid #ffcc2a;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -286,7 +286,7 @@ a:focus {
 
 .slider_section .detail-box a:hover {
   background-color: transparent;
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .slider_section .img-box img {
@@ -316,7 +316,7 @@ a:focus {
 .slider_section .carousel-indicators li.active {
   width: 20px;
   height: 20px;
-  background-color: #ffe529;
+  background-color: #ffcc2a;
 }
 
 .slider_bg_box {
@@ -454,14 +454,14 @@ a:focus {
 }
 
 .product_section .options .option1 {
-  background-color: #ffe529;
-  border: 1px solid #ffe529;
+  background-color: #ffcc2a;
+  border: 1px solid #ffcc2a;
   color: #ffffff;
 }
 
 .product_section .options .option1:hover {
   background-color: transparent;
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .product_section .options .option2 {
@@ -488,8 +488,8 @@ a:focus {
 .product_section .btn-box a {
   display: inline-block;
   padding: 10px 40px;
-  background-color: #ffe529;
-  border: 1px solid #ffe529;
+  background-color: #ffcc2a;
+  border: 1px solid #ffcc2a;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -498,7 +498,7 @@ a:focus {
 
 .product_section .btn-box a:hover {
   background-color: transparent;
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .arrival_section .heading_container {
@@ -536,8 +536,8 @@ a:focus {
 .arrival_section a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #ffe529;
-  border: 1px solid #ffe529;
+  background-color: #ffcc2a;
+  border: 1px solid #ffcc2a;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -546,7 +546,7 @@ a:focus {
 
 .arrival_section a:hover {
   background-color: transparent;
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .why_section .box {
@@ -632,8 +632,8 @@ a:focus {
 .subscribe_section .subscribe_form form button {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #ffe529;
-  border: 1px solid #ffe529;
+  background-color: #ffcc2a;
+  border: 1px solid #ffcc2a;
   color: #ffffff;
   border-radius: 35px;
   -webkit-transition: all 0.3s;
@@ -647,7 +647,7 @@ a:focus {
 
 .subscribe_section .subscribe_form form button:hover {
   background-color: transparent;
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .client_section .box {
@@ -745,7 +745,7 @@ a:focus {
   height: 50px;
   opacity: 1;
   color: #ffffff;
-  background-color: #ffe529;
+  background-color: #ffcc2a;
   border-radius: 100%;
 }
 
@@ -805,7 +805,7 @@ a:focus {
 }
 
 .footer_section .footer_contact .contact_link_box a:hover {
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .footer_section .footer-logo {
@@ -847,7 +847,7 @@ a:focus {
 }
 
 .footer_section .footer_social a:hover {
-  color: #ffe529;
+  color: #ffcc2a;
 }
 
 .footer_section .map_container {

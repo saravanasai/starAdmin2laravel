@@ -1,6 +1,6 @@
 @extends('Layout.frontend.MasterLayout')
 @section('tittle')
-<title>Amsons || Signup</title>
+<title>Amsons || Login</title>
 <link rel="stylesheet" type="text/css" href="{{asset('Login/style.css')}}" />
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 @endsection
@@ -17,7 +17,7 @@
                     <img src="{{asset('website/images/logo.jpg')}}" width="250px">
                 </div>
                 <div class="heading mb-4">
-                    <p class="text-dark h3">Register</p>
+                    <p class="text-dark h3">Login</p>
                 </div>
                 <div class="conatiner">
                     @if ($errors->any())
@@ -30,19 +30,11 @@
                     </div>
                     @endif
                 </div>
-                <form action="{{route('signup')}}" method="POST">
+                <form action="{{route('login')}}" method="POST">
                     @csrf
-                    <div class="form-input">
-                        <span><i class="fa fa-user"></i></span>
-                        <input type="text" name="username" placeholder="username" value="{{old('username')}}" >
-                    </div>
                     <div class="form-input">
                         <span><i class="fa fa-envelope"></i></span>
                         <input type="email"  name="email" placeholder="Email Address" value="{{old('email')}}" required>
-                    </div>
-                    <div class="form-input">
-                        <span><i class="fa fa-phone"></i></span>
-                        <input type="text" name="phonenumber" value="{{old('phonenumber')}}" placeholder="Enter Phone Number" >
                     </div>
                     <div class="form-input">
                         <span><i class="fa fa-lock"></i></span>
@@ -60,7 +52,7 @@
                         </div>
                     </div>
                     <div class="text-left mb-3">
-                        <button type="submit" class="btn">Regsiter</button>
+                        <button type="submit" class="btn">Login</button>
                     </div>
                 </form>
                 

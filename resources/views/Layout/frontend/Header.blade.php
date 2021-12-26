@@ -8,7 +8,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav">
                 <li class="nav-item active">
-                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                   <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                <li class="nav-item dropdown">
                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pages <span class="caret"></span></a>
@@ -21,14 +21,27 @@
                    <a class="nav-link" href="product.html">Products</a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link" href="contact.html">Contact</a>
+                   <a class="nav-link" href="{{route('user.contact')}}">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('login')}}">Login</a>
-                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('signup')}}">Sign Up</a>
-                 </li>
+               @if (auth()->user())
+               <li class="nav-item">
+                <a class="nav-link" href="#">My Orders</a>
+             </li>
+             <li class="nav-item">
+                 <form action="{{route('user.logout')}}" method="post">
+                    @csrf
+                <button type="sumbit" class="btn btn-warning nav-link">Logout</button>
+                </form>
+             </li>
+               @else
+               <li class="nav-item">
+                <a class="nav-link" href="{{route('login')}}">Login</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{{route('signup')}}">Sign Up</a>
+             </li>
+               @endif
+                
                 <li class="nav-item">
                    <a class="nav-link" href="#">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -85,11 +98,11 @@
                       </svg>
                    </a>
                 </li>
-                <form class="form-inline">
+                {{-- <form class="form-inline">
                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                    <i class="fa fa-search" aria-hidden="true"></i>
                    </button>
-                </form>
+                </form> --}}
              </ul>
           </div>
        </nav>

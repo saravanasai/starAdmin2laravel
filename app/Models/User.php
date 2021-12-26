@@ -43,4 +43,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function castrole()
+    {
+       if( $this->is_admin==1)
+       {
+           return "Admin";
+       }
+       else
+       {
+        return "User";
+       }
+    }
 }

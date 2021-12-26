@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminDashBoardControlller extends Controller
@@ -15,6 +16,7 @@ class AdminDashBoardControlller extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('Admin.dashboard');
+        $totalUsers=User::all()->count();
+        return view('Admin.dashboard',compact('totalUsers'));
     }
 }

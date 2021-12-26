@@ -5,7 +5,7 @@
 }
 
 .form-container{
-    background-color: #ffe529;
+    background-color: #ffcc2a;
     display: flex;
     justify-content: center;
 }
@@ -48,10 +48,6 @@
     padding-left: 0px;
 }
 
-.form-box .form-input input:focus,
-.form-box .form-input input:valid{
-    border-bottom: 2px solid #48403d;
-}
 
 .form-box input[type="checkbox"]:not(:checked) + label:before{
     background: transparent;

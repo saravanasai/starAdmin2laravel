@@ -10,10 +10,16 @@
       <div class="row w-100 mx-0">
         <div class="col-lg-4 mx-auto">
           <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-            <div class="brand-logo">
-              <img src="../../images/logo.svg" alt="logo">
+              <div class="row">
+                <div class="container">
+                    <img src="{{asset('website/images/logo.jpg')}}" width="95%" height="200" alt="logo">
+                  </div>
+              </div>
+            <div class="row mt-3">
+                <center>
+                    <h3 class="fw-bold">Amsons Crockery</h3>
+                </center>
             </div>
-            <h3 class="fw-bold">Amsons Admin Login</h3>
             @if($errors)
             <div class="container">
                 <ul>
@@ -26,13 +32,13 @@
             <form class="pt-3" method="POST" action="{{route('adminlogin')}}">
               @csrf
               <div class="form-group">
-                <input type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                <input type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
               </div>
               <div class="form-group">
                 <input type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
               </div>
               <div class="mt-3">
-                <button type="submit" class="btn btn-warning font-weight-medium" >SIGN IN</button>
+                <button type="submit" class="btn btn-warning font-weight-medium" >LOGIN</button>
               </div>
               <div class="my-2 d-flex justify-content-between align-items-center">
                 <div class="form-check">

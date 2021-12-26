@@ -7,7 +7,7 @@
 @section('content')
 <div class="row">
     <div class="col-md-4">
-        <x-widget.info-card bg="primary" value="55" tittle="Products"  />
+        <x-widget.info-card bg="primary" value="{{$totalUsers}}" tittle="Total Users"  />
     </div>
     <div class="col-md-4">
         <x-widget.info-card bg="info" value="50" tittle="Orders"/>
