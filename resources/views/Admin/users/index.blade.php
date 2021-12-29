@@ -11,36 +11,59 @@
     </div>
     <div class="card-body">
         <div class="row">
-            <table class="table py-2">
+            <table class="table py-2" id="userListdatatable">
                 <thead>
                 <tr class="">
-                  <th>#</th>
+                  <th>Sno</th>
                   <th>Username</th>
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Role</th>
-                  <th>Action</th>
+                  {{-- <th>Action</th> --}}
                 </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                   @foreach ($users as $user)
-                     <td>{{$loop->iteration}}</td>
-                     <td>{{$user->name}}</td>
-                     <td>{{$user->email}}</td>
-                     <td>{{$user->phone_number}}</td>
-                     <td><span class="badge badge-pill badge-success">{{$user->castrole()}}</span></td>
-                     <td><button class="btn btn-primary btn-sm" >View</button></td>
-                    </tr>
-                   @endforeach
+                  {{--  "ajax": "{{ route('api.customers.index') }}", --}}
                 </tbody>
             </table>
             <div class="row">
                 <div class="col-md-6">
-                    {{$users->links()}}
+                    {{-- {{$users->links()}} --}}
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('js')
+<script type="text/javascript" src="{{asset('DataTables/datatables.min.js')}}"></script>
+<script>
+    $(document).ready( function () {
+
+         console.log("ok");
+        $('#userListdatatable').DataTable(
+            {
+                "processing": true,
+                "serverSide": true,
+                "ajax": "{{ route('api.customers.index') }}",
+                "columns": [
+                    { "data": "id" },
+                    { "data": "name" },
+                    { "data": "email" },
+                    { "data": "phone_number" },
+                    {data: 'action', name: 'action', orderable: false, searchable: false}
+                ],
+                dom: 'Bfrtip',
+        buttons: [
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5',
+            'colvis'
+        ]
+            }
+        );
+    });
+</script>
 @endsection

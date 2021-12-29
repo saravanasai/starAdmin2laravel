@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-
+use Yajra\Datatables\Datatables;
 use Illuminate\Http\Request;
 
 class AdminUserController extends Controller
@@ -16,9 +16,7 @@ class AdminUserController extends Controller
      */
     public function index()
     {
-
-        $users=User::paginate(5);
-        return view('Admin.users.index',compact('users'));
+        return view('Admin.users.index');
     }
 
     /**
@@ -50,7 +48,7 @@ class AdminUserController extends Controller
      */
     public function show($id)
     {
-        //
+        return dd($id);
     }
 
     /**
@@ -85,5 +83,13 @@ class AdminUserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getCustomers()
+    {
+        $user = User::select('id','name', 'email', 'phone_number');
+        return Datatables::of($user)->addColumn('action', function ($user) {
+            return '<a href="users/'.$user->id.'" class="btn  btn-success py-2"><i class="fas fa-edit"></i> Edit</a>';
+        })->make(true);
     }
 }
